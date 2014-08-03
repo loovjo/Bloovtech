@@ -1,0 +1,16 @@
+package com.loovjo.bloovtech.item;
+
+import java.util.Set;
+
+import net.minecraft.item.ItemTool;
+
+public class ItemPowerStone extends ItemTool {
+	@SuppressWarnings("null")
+	public ItemPowerStone() {
+		super((Float) null, null, null);
+		// TODO Auto-generated constructor stub
+	}
+
+	public static int powerMax;
+	
+}

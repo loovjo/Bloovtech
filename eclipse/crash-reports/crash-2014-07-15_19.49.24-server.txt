@@ -1,0 +1,77 @@
+---- Minecraft Crash Report ----
+// Would you like a cupcake?
+
+Time: 2014-07-15 19:49
+Description: Ticking block entity
+
+java.lang.NullPointerException: Ticking block entity
+	at com.loovjo.bloovtech.tileentity.TileEntityFireDynamo.updateEntity(TileEntityFireDynamo.java:28)
+	at net.minecraft.world.World.updateEntities(World.java:2116)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:528)
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:697)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:608)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:482)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:746)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.loovjo.bloovtech.tileentity.TileEntityFireDynamo.updateEntity(TileEntityFireDynamo.java:28)
+
+-- Block entity being ticked --
+Details:
+	Name: bloovtech:fireDynamo // com.loovjo.bloovtech.tileentity.TileEntityFireDynamo
+	Block type: ID #166 (tile.fireDynamo // com.loovjo.bloovtech.block.BlockFireDynamo)
+	Block data value: 0 / 0x0 / 0b0000
+	Block location: World: (-130,69,316), Chunk: (at 14,4,12 in -9,19; contains blocks -144,0,304 to -129,255,319), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Actual block type: ID #166 (tile.fireDynamo // com.loovjo.bloovtech.block.BlockFireDynamo)
+	Actual block data value: 0 / 0x0 / 0b0000
+Stacktrace:
+	at net.minecraft.world.World.updateEntities(World.java:2116)
+	at net.minecraft.world.WorldServer.updateEntities(WorldServer.java:528)
+
+-- Affected level --
+Details:
+	Level name: New World
+	All players: 1 total; [EntityPlayerMP['Player11'/348, l='New World', x=-97,51, y=16,00, z=288,51]]
+	Chunk stats: ServerChunkCache: 550 Drop: 0
+	Level seed: -8757117646383264323
+	Level generator: ID 00 - default, ver 1. Features enabled: true
+	Level generator options: 
+	Level spawn location: World: (-168,64,256), Chunk: (at 8,4,0 in -11,16; contains blocks -176,0,256 to -161,255,271), Region: (-1,0; contains chunks -32,0 to -1,31, blocks -512,0,0 to -1,255,511)
+	Level time: 62963 game time, 47461 day time
+	Level dimension: 0
+	Level storage version: 0x04ABD - Anvil
+	Level weather: Rain time: 75436 (now: false), thunder time: 139563 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:697)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:608)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:118)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:482)
+	at net.minecraft.server.MinecraftServer$2.run(MinecraftServer.java:746)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.2
+	Operating System: Mac OS X (x86_64) version 10.9.2
+	Java Version: 1.6.0_65, Apple Inc.
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Apple Inc.
+	Memory: 891230144 bytes (849 MB) / 1065025536 bytes (1015 MB) up to 1065025536 bytes (1015 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 3757 (210392 bytes; 0 MB) allocated, 3667 (205352 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	FML: MCP v9.03 FML v7.2.211.1121 Minecraft Forge 10.12.2.1121 4 mods loaded, 4 mods active
+	mcp{9.03} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{7.2.211.1121} [Forge Mod Loader] (forgeSrc-1.7.2-10.12.2.1121.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{10.12.2.1121} [Minecraft Forge] (forgeSrc-1.7.2-10.12.2.1121.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	bloovtech{Pre-alpha 0.001} [bloovtech] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 1697 (95032 bytes; 0 MB) allocated, 1379 (77224 bytes; 0 MB) used
+	Player Count: 1 / 8; [EntityPlayerMP['Player11'/348, l='New World', x=-97,51, y=16,00, z=288,51]]
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'

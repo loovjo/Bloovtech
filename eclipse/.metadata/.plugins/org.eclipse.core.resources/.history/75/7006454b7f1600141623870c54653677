@@ -1,0 +1,7 @@
+package com.loovjo.bloovtech.tileentity;
+
+import net.minecraft.tileentity.TileEntity;
+
+public class TileEntityEnergyBarrel extends TileEntity {
+	public int energyStored, energyMax = 100000;
+}

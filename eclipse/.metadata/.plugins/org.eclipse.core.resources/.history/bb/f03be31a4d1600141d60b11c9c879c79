@@ -1,0 +1,24 @@
+package com.loovjo.bloovtech.tileentity;
+
+import net.minecraft.tileentity.TileEntity;
+
+public class TileEntitySteamToPower extends TileEntity {
+	public int powerMax = 8000, powerStored = 0, steamStored, steamToPowerRate = 2,
+			hmspp = 10, steamMax = 4000;
+
+	@Override
+	public void updateEntity() {
+		if (steamStored > steamToPowerRate - 1) {
+			powerStored += hmspp;
+			steamStored -= hmspp * steamToPowerRate;
+		}
+	}
+
+	public int getPowerScaled(int scale) {
+		return (int) (powerStored / (float) powerMax * scale);
+	}
+
+	public int getSteamScaled(int scale) {
+		return (int) (steamStored / (float) steamMax * scale);
+	}
+}

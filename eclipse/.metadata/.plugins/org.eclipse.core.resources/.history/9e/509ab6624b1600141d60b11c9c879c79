@@ -1,0 +1,13 @@
+package com.loovjo.bloovtech.container;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.Container;
+
+public class ContainerTurbine extends Container {
+
+	@Override
+	public boolean canInteractWith(EntityPlayer var1) {
+		return true;
+	}
+
+}

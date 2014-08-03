@@ -1,0 +1,52 @@
+package com.loovjo.bloovtech.block;
+
+import com.loovjo.bloovtech.BloovMain;
+import com.loovjo.bloovtech.tileentity.TileEntitySteamToPower;
+
+import net.minecraft.block.BlockContainer;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.IIcon;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.World;
+
+public class BlockSteamToPower extends BlockContainer {
+
+	
+	private IIcon iconTop, iconBottom;
+	
+	public BlockSteamToPower(Material mat) {
+		super(mat);
+		// TODO Auto-generated constructor stub
+	}
+	
+
+	@Override
+	public TileEntity createNewTileEntity(World var1, int var2) {
+		return new TileEntitySteamToPower();
+	}
+
+	@Override
+	public IIcon getIcon(IBlockAccess p_149673_1_, int p_149673_2_,
+			int p_149673_3_, int p_149673_4_, int side) {
+		return side == 0 ? side == 1 ? blockIcon : iconBottom : iconTop;
+	}
+
+	@Override
+	public void registerBlockIcons(IIconRegister iconreg) {
+		
+		iconTop = iconreg.registerIcon(BloovMain.MODID + ":barrel_top");
+		iconBottom = iconreg.registerIcon(BloovMain.MODID + ":barrel_bottom");
+		blockIcon = iconreg.registerIcon(BloovMain.MODID + ":barrel_side");
+	}
+
+	@Override
+	public boolean onBlockActivated(World world, int x, int y, int z,
+			EntityPlayer player, int p_149727_6_, float p_149727_7_,
+			float p_149727_8_, float p_149727_9_) {
+		player.openGui(BloovMain.instance, 4, world, x, y, z);
+		return true;
+	}
+}

@@ -1,0 +1,20 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="net.minecraft.util.ResourceLocation"><rhs name\="net.minecraft.util.ResourceLocation"/></lhs><lhs name\="net.minecraft.tileentity.TileEntity"><rhs name\="com.loovjo.bloovtech.tileentity.TileEntityWaterPump"/><rhs name\="com.loovjo.bloovtech.tileentity.TileEntitySteamGenerator"/><rhs name\="com.loovjo.bloovtech.tileentity.TileEntitySteamToPower"/><rhs name\="com.loovjo.bloovtech.tileentity.TileEntityEnergyBarrel"/></lhs><lhs name\="com.loovjo.bloovtech.tileentity.TileEntityWaterPump"><rhs name\="com.loovjo.bloovtech.tileentity.TileEntityWaterPump"/></lhs><lhs name\="net.minecraft.block.Block"><rhs name\="com.loovjo.bloovtech.BlockCustomCraftingTable"/><rhs name\="com.loovjo.bloovtech.block.BlockCustomCraftingTable"/><rhs name\="net.minecraft.block.BlockOre"/></lhs><lhs name\="net.minecraft.entity.Entity"><rhs name\="net.minecraft.client.entity.EntityPlayerSP"/><rhs name\="net.minecraft.entity.item.EntityItem"/></lhs><lhs name\="net.minecraft.inventory.ISidedInventory"><rhs name\="com.loovjo.bloovtech.tileentity.TileEntitySteamGenerator"/></lhs><lhs name\="net.minecraft.inventory.IInventory"><rhs name\="com.loovjo.bloovtech.tileentity.TileEntitySteamGenerator"/></lhs><lhs name\="com.loovjo.bloovtech.tileentity.TileEntitySteamGenerator"><rhs name\="com.loovjo.bloovtech.tileentity.TileEntitySteamGenerator"/></lhs><lhs name\="com.loovjo.bloovtech.tileentity.TileEntitySteamToPower"><rhs name\="com.loovjo.bloovtech.tileentity.TileEntitySteamToPower"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="net.minecraft.util.ChatComponentTranslation"/><rhs name\="java.util.ArrayList"/></lhs><lhs name\="net.minecraft.util.IChatComponent"><rhs name\="net.minecraft.util.ChatComponentTranslation"/></lhs><lhs name\="com.loovjo.bloovtech.tileentity.TileEntityEnergyBarrel"><rhs name\="com.loovjo.bloovtech.tileentity.TileEntityEnergyBarrel"/></lhs><lhs name\="java.lang.Enum"><rhs name\="net.minecraftforge.common.util.ForgeDirection"/></lhs><lhs name\="net.minecraft.item.Item"><rhs name\="com.loovjo.bloovtech.item.ItemPowerStone"/><rhs name\="net.minecraft.item.Item"/><rhs name\="com.loovjo.bloovtech.item.ItemOverPower"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.RandomAccess"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.AbstractList"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.AbstractCollection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.ArrayList"><rhs name\="java.util.ArrayList"/></lhs></history>
+content_assist_number_of_computers=13
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+fontPropagated=true
+markOccurrences=false
+org.eclipse.jdt.ui.editor.tab.width=
+org.eclipse.jdt.ui.formatterprofiles.version=12
+org.eclipse.jdt.ui.javadoclocations.migrated=true
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+org.eclipse.jface.textfont=1|Monaco|11.0|0|COCOA|1|;
+proposalOrderMigrated=true
+spelling_locale_initialized=true
+tabWidthPropagated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

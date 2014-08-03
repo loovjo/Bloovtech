@@ -1,0 +1,12 @@
+package com.loovjo.bloovtech.interfaces;
+
+import net.minecraftforge.common.util.ForgeDirection;
+
+public interface IEnergyConnectable {
+	public boolean canAccept(ForgeDirection fd);
+	// Only going to be called if "canAccept" is true
+	public void onEnergyAccept(int amount, ForgeDirection fd);
+	public boolean canDraw(ForgeDirection fd);
+	// Only going to be called if "canDraw" is true
+	public void onEnergyDraw(int amount, ForgeDirection fd);
+}

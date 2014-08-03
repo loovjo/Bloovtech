@@ -1,0 +1,37 @@
+
+tile.powerPipe.name=Power Pipe
+tile.steamGenerator.name=Steam Generator
+tile.waterPump.name=Water Pump
+tile.energyBarrel.name=Energy Barrel
+tile.turbine.name=Steam Turbine
+tile.magnetQuarry.name=Magnet Quarry
+tile.cluster.name=Block Cluster
+tile.energyTransferer.name=Energium Transfer...er?
+
+
+item.op1.name=Overpowerium - 5%
+item.op2.name=Overpowerium - 10%
+item.op3.name=Overpowerium - 15%
+item.op4.name=Overpowerium - 20%
+item.op5.name=Overpowerium - 25%
+item.op6.name=Overpowerium - 30%
+item.op7.name=Overpowerium - 35%
+item.op8.name=Overpowerium - 40%
+item.op9.name=Overpowerium - 45%
+item.op10.name=Overpowerium - 50%
+item.op11.name=Overpowerium - 55%
+item.op12.name=Overpowerium - 60%
+item.op13.name=Overpowerium - 65%
+item.op14.name=Overpowerium - 70%
+item.op15.name=Overpowerium - 75%
+item.op16.name=Overpowerium - 80%
+item.op17.name=Overpowerium - 85%
+item.op18.name=Overpowerium - 90%
+item.op19.name=Overpowerium - 95%
+
+
+item.powerStone.name=Power Stone
+item.electricBag.name=Electric Bag
+
+
+message.eb.energy=Energium Level: %s of maximum %s, %s

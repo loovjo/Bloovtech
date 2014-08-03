@@ -1,0 +1,37 @@
+package com.loovjo.bloovtech.tileentity;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.tileentity.TileEntity;
+
+public class TileEntityWaterPump extends TileEntity {
+
+	public float waterLevel, addLevel, speed = 50, maxWater = 4000;
+
+	@Override
+	public void updateEntity() {
+		super.updateEntity();
+
+		if (worldObj.getBlock(xCoord, yCoord - 1, zCoord) == Blocks.flowing_water
+				&& waterLevel + addLevel < maxWater) {
+			addLevel += 1000;
+			worldObj.setBlockToAir(xCoord, yCoord - 1, zCoord);
+		}
+		if (addLevel > 0) {
+			waterLevel += speed;
+			addLevel -= speed;
+		}
+		if (addLevel < 0) {
+			addLevel = 0;
+		}
+		if (waterLevel > maxWater) {
+			waterLevel = maxWater;
+		}
+		TileEntity t1 = worldObj.getTileEntity(xCoord, yCoord + 1, zCoord);
+		if (t1 != null && t1 instanceof TileEntitySteamGenerator) {
+			TileEntitySteamGenerator t = (TileEntitySteamGenerator) t1;
+			t.waterStored += speed;
+			waterLevel -= speed;
+		}
+	}
+
+}

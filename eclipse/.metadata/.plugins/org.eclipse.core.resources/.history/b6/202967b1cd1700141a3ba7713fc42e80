@@ -1,0 +1,14 @@
+
+tile.powerPipe.name=Power Pipe
+tile.steamGenerator.name=Steam Generator
+tile.waterPump.name=Water Pump
+tile.energyBarrel.name=Energy Barrel
+tile.turbine.name=Steam Turbine
+tile.magnetQuarry.name=Magnet Quarry
+tile.cluster.name=Block Cluster
+tile.energyTransferer.name=Energium Transfer...er?
+
+item.electricBag.name=Electric Bag
+
+
+message.eb.energy=Energium Level: %s of maximum %s, %s

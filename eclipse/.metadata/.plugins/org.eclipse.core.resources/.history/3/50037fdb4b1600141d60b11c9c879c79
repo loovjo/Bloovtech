@@ -1,0 +1,18 @@
+package com.loovjo.bloovtech.gui;
+
+import java.awt.Container;
+
+import com.loovjo.bloovtech.container.ContainerSteamGenerator;
+
+import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.tileentity.TileEntity;
+
+public class GuiTurbine extends GuiContainer {
+
+	public GuiTurbine(InventoryPlayer invplayer, TileEntity te) {
+		super(new ContainerSteamGenerator(invplayer, te));
+		// TODO Auto-generated constructor stub
+	}
+
+}

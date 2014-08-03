@@ -1,0 +1,22 @@
+package com.loovjo.bloovtech.container;
+
+import com.loovjo.bloovtech.tileentity.TileEntitySteamToPower;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.Container;
+import net.minecraft.world.World;
+
+public class ContainerTurbine extends Container {
+
+	public ContainerTurbine(InventoryPlayer inventory, World world,
+			TileEntitySteamToPower tileEntity) {
+		
+	}
+
+	@Override
+	public boolean canInteractWith(EntityPlayer var1) {
+		return true;
+	}
+
+}

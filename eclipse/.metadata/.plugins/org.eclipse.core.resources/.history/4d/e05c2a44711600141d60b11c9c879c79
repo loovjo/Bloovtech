@@ -1,0 +1,26 @@
+package com.loovjo.bloovtech.entity;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.nbt.NBTTagCompound;
+
+public class EntityLaser extends Entity {
+
+	@Override
+	protected void entityInit() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	protected void readEntityFromNBT(NBTTagCompound var1) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	protected void writeEntityToNBT(NBTTagCompound var1) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
