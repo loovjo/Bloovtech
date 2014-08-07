@@ -4,39 +4,55 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockCake;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.oredict.OreDictionary;
+import net.minecraftforge.oredict.ShapedOreRecipe;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 import com.loovjo.bloovtech.block.BlockCluster;
 import com.loovjo.bloovtech.block.BlockCustomCraftingTable;
 import com.loovjo.bloovtech.block.BlockEnergyBarrelTier1;
 import com.loovjo.bloovtech.block.BlockEnergyTransferer;
+import com.loovjo.bloovtech.block.BlockFastGrass;
 import com.loovjo.bloovtech.block.BlockFireDynamo;
+import com.loovjo.bloovtech.block.BlockGrassEater;
 import com.loovjo.bloovtech.block.BlockInfuser;
 import com.loovjo.bloovtech.block.BlockMagnetQuarry;
+import com.loovjo.bloovtech.block.BlockOverpowerOre;
 import com.loovjo.bloovtech.block.BlockPowerPipe;
 import com.loovjo.bloovtech.block.BlockTurbine;
 import com.loovjo.bloovtech.block.BlockWaterPump;
 import com.loovjo.bloovtech.event.BloovEventHandler;
 import com.loovjo.bloovtech.gui.BloovGuiHandler;
+import com.loovjo.bloovtech.item.ItemCCBlock;
 import com.loovjo.bloovtech.item.ItemElectricBag;
+import com.loovjo.bloovtech.item.ItemGrassStabilizer;
+import com.loovjo.bloovtech.item.ItemGrowthMedium;
+import com.loovjo.bloovtech.item.ItemLawnMover;
 import com.loovjo.bloovtech.item.ItemOverPower;
 import com.loovjo.bloovtech.item.ItemPowerStone;
+import com.loovjo.bloovtech.item.ItemSaw;
 import com.loovjo.bloovtech.proxy.CommonProxy;
 import com.loovjo.bloovtech.tileentity.TileEntityCustomCraftingTable;
 import com.loovjo.bloovtech.tileentity.TileEntityEnergyBarrel;
 import com.loovjo.bloovtech.tileentity.TileEntityEnergyTransferer;
+import com.loovjo.bloovtech.tileentity.TileEntityFastGrass;
+import com.loovjo.bloovtech.tileentity.TileEntityGrassEater;
 import com.loovjo.bloovtech.tileentity.TileEntityInfuser;
 import com.loovjo.bloovtech.tileentity.TileEntityMagnetQuarry;
 import com.loovjo.bloovtech.tileentity.TileEntityPowerPipe;
 import com.loovjo.bloovtech.tileentity.TileEntitySteamGenerator;
 import com.loovjo.bloovtech.tileentity.TileEntityTurbine;
 import com.loovjo.bloovtech.tileentity.TileEntityWaterPump;
+import com.loovjo.bloovtech.worldgen.OreGen;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -91,6 +107,17 @@ public class BloovMain {
 			.setCreativeTab(bloovtab).setHardness(20);
 	public static Block blockOverPowerer = new BlockInfuser(Material.rock)
 			.setBlockName("infuser").setCreativeTab(bloovtab);
+	public static Block blockFastGrass = new BlockFastGrass(Material.grass)
+			.setCreativeTab(bloovtab).setBlockTextureName("grass")
+			.setBlockName("fastGrass");
+	public static Block blockGrassEater = new BlockGrassEater(Material.ground)
+			.setBlockName("grassEater")
+			.setBlockTextureName(MODID + ":grassEater")
+			.setCreativeTab(bloovtab);
+	public static Block blockOverPowerOre = new BlockOverpowerOre(Material.rock)
+			.setCreativeTab(bloovtab).setBlockName("oreOverpower")
+			.setBlockTextureName(MODID + ":overpowerOre").setHardness(5)
+			.setResistance(5);
 
 	public static ItemOverPower itemOverPowerIngot = (ItemOverPower) new ItemOverPower(
 			20).setTextureName(MODID + ":overpowerium/0%")
@@ -106,6 +133,26 @@ public class BloovMain {
 			.setCreativeTab(bloovtab).setMaxStackSize(1)
 			.setUnlocalizedName("electricBag")
 			.setTextureName(MODID + ":electricbag");
+	public static Item itemIronSaw = new ItemSaw()
+			.setUnlocalizedName("ironSaw").setTextureName(MODID + ":ironSaw")
+			.setMaxStackSize(1).setCreativeTab(bloovtab);
+	public static Item itemSawBlade = new Item()
+			.setUnlocalizedName("ironSawBlade")
+			.setTextureName(MODID + ":ironSawBlade").setCreativeTab(bloovtab);
+	public static Item itemSawBladeHolder = new Item()
+			.setUnlocalizedName("ironSawBladeHolder").setCreativeTab(bloovtab)
+			.setTextureName(MODID + ":ironSawBladeHolder");
+	public static Item itemLawnMover = new ItemLawnMover()
+			.setUnlocalizedName("lawnMover").setCreativeTab(bloovtab)
+			.setTextureName(MODID + ":lawnMover");
+	public static Item itemSkin = new Item().setUnlocalizedName("skin")
+			.setCreativeTab(bloovtab).setTextureName(MODID + ":skin");
+	public static Item itemGrowthMedium = new ItemGrowthMedium()
+			.setUnlocalizedName("growthMedium")
+			.setTextureName(MODID + ":growth_medium").setCreativeTab(bloovtab);
+	public static Item itemGrassStabilizer = new ItemGrassStabilizer()
+			.setCreativeTab(bloovtab).setUnlocalizedName("grassStabilizer")
+			.setTextureName(MODID + ":grassStabilizer");
 
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
@@ -119,7 +166,19 @@ public class BloovMain {
 				Blocks.dirt, Blocks.sand);
 		registerOverPoverium();
 		registerInfuserRecipes();
+		registerSmelting();
+		registerWorldGen();
 		MinecraftForge.EVENT_BUS.register(new BloovEventHandler());
+	}
+
+	private void registerWorldGen() {
+		GameRegistry.registerWorldGenerator(new OreGen(), 100);
+
+	}
+
+	private void registerSmelting() {
+		GameRegistry.addSmelting(blockOverPowerOre, new ItemStack(
+				itemOverPowerIngot), 10);
 	}
 
 	private void registerInfuserRecipes() {
@@ -166,22 +225,59 @@ public class BloovMain {
 		GameRegistry.addShapedRecipe(new ItemStack(blockMagnetQuarry), "ccc",
 				"crc", "ctc", 'c', blockCluster, 'r', Blocks.redstone_block,
 				't', Blocks.tnt);
+		GameRegistry.addRecipe(new ItemStack(itemIronSaw), "b ", " h", 'b',
+				itemSawBlade, 'h', itemSawBladeHolder);
+		GameRegistry.addRecipe(new ItemStack(itemSawBlade), " i ", " i ",
+				"ii ", 'i', Items.iron_ingot);
+		GameRegistry.addRecipe(new ItemStack(itemSawBladeHolder), " c ", "c c",
+				"csc", 'c', Blocks.cobblestone, 's', Items.stick);
 
+		OreDictionary.registerOre("skullSkeleton", Items.skull);
+		OreDictionary.registerOre("skull", new ItemStack(Items.skull, 1, 1));
+		OreDictionary.registerOre("skull", new ItemStack(Items.skull, 1, 2));
+		OreDictionary.registerOre("head", new ItemStack(Items.skull, 1, 3));
+
+		GameRegistry.addRecipe(new ShapelessOreRecipe(getHeadFromPlayer(""),
+				itemSkin, itemSkin, itemSkin, "skullSkeleton"));
+
+		GameRegistry.addRecipe(new ShapedOreRecipe(getHeadFromPlayer("loovjo"),
+				"drd", "ghg", "oso", 'd', Items.diamond, 'r',
+				Blocks.redstone_block, 'g', Items.golden_apple, 'h', "head",
+				'o', Blocks.obsidian, 's', Items.nether_star));
+
+		GameRegistry.addRecipe(new ShapelessOreRecipe(
+				new ItemStack(Items.skull), "dyeWhite", "skull"));
+
+	}
+
+	public static ItemStack getHeadFromPlayer(String playerName) {
+		ItemStack itemstack = new ItemStack(Items.skull);
+		itemstack.setItemDamage(3);
+		if (playerName != "") {
+			itemstack.setTagCompound(new NBTTagCompound());
+			itemstack.getTagCompound().setString("SkullOwner", playerName);
+		}
+		return itemstack;
 	}
 
 	private void registerCraftingTables(Block... types) {
 		for (Block type : types) {
-			Block b = new BlockCustomCraftingTable(type)
-					.setCreativeTab(bloovtab);
+			BlockCustomCraftingTable b = (BlockCustomCraftingTable) new BlockCustomCraftingTable(
+					type).setBlockName(type.getUnlocalizedName() + "ct");
+			Item i = new ItemCCBlock(b).setCreativeTab(bloovtab);
+			b.setI(i);
+
 			GameRegistry.registerBlock(b,
 					"crafting_table_" + type.getUnlocalizedName().substring(5))
 					.getLocalizedName();
 			GameRegistry.registerTileEntity(
 					TileEntityCustomCraftingTable.class,
 					MODID + ":cct" + type.getUnlocalizedName());
+			GameRegistry.registerItem(i, "craftingTable"
+					+ type.getUnlocalizedName().substring(5));
 
-			GameRegistry.addRecipe(new ItemStack(b), "aba", 'a',
-					Items.iron_axe, 'b', type);
+			GameRegistry.addRecipe(new ItemStack(i), " a ", "ibi", " a ", 'a',
+					Items.iron_axe, 'b', type, 'i', itemIronSaw);
 
 		}
 	}
@@ -196,6 +292,13 @@ public class BloovMain {
 		GameRegistry.registerItem(itemPowerStone, "powerStone");
 		GameRegistry.registerItem(itemOverPowerIngot, "overpoweringot");
 		GameRegistry.registerItem(itemOverPowerium, "overpowerium");
+		GameRegistry.registerItem(itemIronSaw, "ironSaw");
+		GameRegistry.registerItem(itemSawBlade, "ironSawBlade");
+		GameRegistry.registerItem(itemSawBladeHolder, "sawBladeHolder");
+		GameRegistry.registerItem(itemLawnMover, "lawnMover");
+		GameRegistry.registerItem(itemSkin, "skin");
+		GameRegistry.registerItem(itemGrowthMedium, "growthMedium");
+		GameRegistry.registerItem(itemGrassStabilizer, "grassStabilizer");
 	}
 
 	private void registerTileEntities() {
@@ -212,9 +315,13 @@ public class BloovMain {
 		GameRegistry.registerTileEntity(TileEntityEnergyBarrel.class, MODID
 				+ ":energyBarrel");
 		GameRegistry.registerTileEntity(TileEntityEnergyTransferer.class, MODID
-				+ "energyTransferer");
+				+ ":energyTransferer");
 		GameRegistry.registerTileEntity(TileEntityInfuser.class, MODID
-				+ "infuser");
+				+ ":infuser");
+		GameRegistry.registerTileEntity(TileEntityFastGrass.class, MODID
+				+ ":fastGrass");
+		GameRegistry.registerTileEntity(TileEntityGrassEater.class, MODID
+				+ ":grassEater");
 	}
 
 	private void registerBlocks() {
@@ -227,5 +334,8 @@ public class BloovMain {
 		GameRegistry.registerBlock(blockEnergyBarrelTier1, "energybarreltier1");
 		GameRegistry.registerBlock(blockEnergyTransferer, "energyTransferer");
 		GameRegistry.registerBlock(blockOverPowerer, "infuser");
+		GameRegistry.registerBlock(blockFastGrass, "fastGrass");
+		GameRegistry.registerBlock(blockGrassEater, "grassEater");
+		GameRegistry.registerBlock(blockOverPowerOre, "overpowerOre");
 	}
 }

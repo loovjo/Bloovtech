@@ -1,5 +1,0 @@
-package com.loovjo.bloovtech.container;
-
-public class ContainerTurbine extends Container {
-
-}

@@ -1,7 +1,0 @@
-package com.loovjo.bloovtech.container;
-
-import net.minecraft.inventory.Container;
-
-public class ContainerTurbine extends Container {
-
-}

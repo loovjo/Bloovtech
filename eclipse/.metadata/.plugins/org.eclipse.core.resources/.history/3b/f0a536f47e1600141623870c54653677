@@ -1,5 +1,0 @@
-package com.loovjo.bloovtech.interfaces;
-
-public interface IEnergyConnectable {
-
-}

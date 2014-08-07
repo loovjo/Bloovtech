@@ -1,7 +1,0 @@
-package com.loovjo.bloovtech.block;
-
-import net.minecraft.block.Block;
-
-public class BlockEnergyTransferer extends Block {
-
-}

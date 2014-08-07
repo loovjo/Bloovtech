@@ -7,16 +7,29 @@ tile.turbine.name=Steam Turbine
 tile.magnetQuarry.name=Magnet Quarry
 tile.cluster.name=Block Cluster
 tile.energyTransferer.name=Energium Transfer...er?
+tile.infuser.name=Infuser
+tile.fastGrass.name=Fast Grass
+tile.grassEater.name=Grass Eater
 
 
+item.overpoweringot.name=Overpower Ingot
 item.op4.name=Overpowerium - 20%
 item.op8.name=Overpowerium - 40%
 item.op12.name=Overpowerium - 60%
 item.op16.name=Overpowerium - 80%
-item.overpowerium=Overpowerium
+item.overpowerium.name=Overpowerium
+
 
 item.powerStone.name=Power Stone
 item.electricBag.name=Electric Bag
-
+item.ironSaw.name=Iron Saw
+item.ironSawBlade.name=Iron Saw Blade
+item.ironSawBladeHolder.name=Iron Saw Blade Holder
+item.lawnMover.name=Lawn Mover
+item.skin.name=Skin
+item.growthMedium.name=Growth Medium
+item.grassStabilizer.name=Grass Stabilizer
 
 message.eb.energy=Energium Level: %s of maximum %s, %s
+
+crafting.name=%s Crafting Table
