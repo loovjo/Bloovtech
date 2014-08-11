@@ -1,0 +1,7 @@
+package com.loovjo.bloovtech.tileentity;
+
+import net.minecraft.tileentity.TileEntity;
+
+public class TileEntityFastGrass extends TileEntity {
+
+}

@@ -1,0 +1,7 @@
+package com.loovjo.bloovtech.item;
+
+import net.minecraft.item.ItemBlock;
+
+public class ItemCCBlock extends ItemBlock {
+
+}

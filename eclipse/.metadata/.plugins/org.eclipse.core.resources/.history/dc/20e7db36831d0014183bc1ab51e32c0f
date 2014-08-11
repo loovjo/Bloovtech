@@ -1,0 +1,13 @@
+package com.loovjo.bloovtech.block;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+
+public class BlockFastGrass extends Block {
+
+	protected BlockFastGrass(Material mat) {
+		super(mat);
+		// TODO Auto-generated constructor stub
+	}
+
+}

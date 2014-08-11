@@ -1,0 +1,15 @@
+package com.loovjo.bloovtech.tileentity;
+
+import net.minecraft.tileentity.TileEntity;
+
+public class TileEntityFastGrass extends TileEntity {
+
+	@Override
+	public void updateEntity() {
+		if (worldObj.rand.nextInt(20) == 0) {
+			
+		}
+		super.updateEntity();
+	}
+
+}

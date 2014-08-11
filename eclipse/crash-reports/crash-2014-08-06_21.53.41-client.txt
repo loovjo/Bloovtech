@@ -1,0 +1,84 @@
+---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 2014-08-06 21:53
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at net.minecraft.client.multiplayer.PlayerControllerMP.sendUseItem(PlayerControllerMP.java:444)
+	at net.minecraft.client.Minecraft.func_147121_ag(Minecraft.java:1527)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:2012)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:997)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:912)
+	at net.minecraft.client.main.Main.main(Main.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.client.multiplayer.PlayerControllerMP.sendUseItem(PlayerControllerMP.java:444)
+	at net.minecraft.client.Minecraft.func_147121_ag(Minecraft.java:1527)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityClientPlayerMP['Player480'/91, l='MpServer', x=25,43, y=272,64, z=21,35]]
+	Chunk stats: MultiplayerChunkCache: 105, 105
+	Level seed: 0
+	Level generator: ID 01 - flat, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: World: (0,4,0), Chunk: (at 0,0,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 1098 game time, 1098 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: false
+	Forced entities: 68 total; [EntityItem['item.item.seeds'/13, l='MpServer', x=-32,47, y=237,13, z=-14,78], EntityItem['item.item.seeds'/14, l='MpServer', x=-35,81, y=237,13, z=12,28], EntityItem['item.item.seeds'/17, l='MpServer', x=-28,84, y=237,13, z=-16,38], EntityItem['item.item.seeds'/16, l='MpServer', x=-21,88, y=237,13, z=-34,47], EntityItem['item.item.seeds'/19, l='MpServer', x=-16,34, y=237,13, z=-13,41], EntityItem['item.item.seeds'/18, l='MpServer', x=-18,44, y=237,13, z=-14,13], EntityItem['item.item.seeds'/21, l='MpServer', x=-30,66, y=237,13, z=-11,84], EntityItem['item.item.seeds'/20, l='MpServer', x=-21,53, y=237,13, z=-7,84], EntityItem['item.item.seeds'/23, l='MpServer', x=-17,22, y=237,13, z=42,50], EntityItem['item.item.seeds'/22, l='MpServer', x=-31,53, y=237,13, z=-15,97], EntityItem['item.item.seeds'/27, l='MpServer', x=-4,16, y=237,13, z=-17,06], EntityItem['item.item.seeds'/29, l='MpServer', x=-13,19, y=237,13, z=-27,59], EntityItem['item.item.seeds'/28, l='MpServer', x=-9,84, y=237,13, z=-26,66], EntityItem['item.item.seeds'/31, l='MpServer', x=-11,28, y=237,13, z=-10,16], EntityItem['item.item.seeds'/30, l='MpServer', x=-11,00, y=237,13, z=-29,88], EntityItem['item.item.seeds'/34, l='MpServer', x=-13,56, y=237,13, z=-4,16], EntityItem['item.item.seeds'/35, l='MpServer', x=-14,41, y=237,13, z=-12,41], EntityItem['item.item.seeds'/32, l='MpServer', x=-8,38, y=237,13, z=-8,16], EntityItem['item.item.seeds'/33, l='MpServer', x=-7,88, y=237,13, z=-10,06], EntityItem['item.tile.log.spruce'/38, l='MpServer', x=-4,50, y=237,13, z=7,56], EntityItem['item.tile.log.spruce'/39, l='MpServer', x=-5,13, y=237,13, z=8,75], EntityItem['item.item.seeds'/36, l='MpServer', x=-11,06, y=237,13, z=2,75], EntityItem['item.tile.log.spruce'/37, l='MpServer', x=-3,38, y=237,13, z=8,25], EntityItem['item.item.seeds'/42, l='MpServer', x=-3,03, y=237,13, z=24,59], EntityItem['item.item.seeds'/43, l='MpServer', x=-4,88, y=237,13, z=23,81], EntityItem['item.tile.log.spruce'/40, l='MpServer', x=-3,28, y=237,13, z=5,69], EntityItem['item.item.seeds'/41, l='MpServer', x=-0,09, y=237,13, z=22,69], EntityItem['item.item.seeds'/46, l='MpServer', x=-11,34, y=237,13, z=42,69], EntityItem['item.item.seeds'/47, l='MpServer', x=-10,19, y=237,13, z=45,44], EntityItem['item.item.seeds'/44, l='MpServer', x=-4,22, y=237,13, z=27,88], EntityItem['item.item.seeds'/45, l='MpServer', x=-9,63, y=237,13, z=20,63], EntityItem['item.item.seeds'/51, l='MpServer', x=10,03, y=237,13, z=-6,88], EntityItem['item.item.seeds'/50, l='MpServer', x=6,78, y=237,13, z=-7,41], EntityItem['item.tile.flower2.poppy'/49, l='MpServer', x=5,44, y=237,13, z=-16,25], EntityItem['item.tile.flower2.poppy'/48, l='MpServer', x=13,44, y=237,13, z=-35,97], EntityItem['item.tile.flower2.poppy'/55, l='MpServer', x=7,53, y=237,13, z=-9,38], EntityItem['item.tile.flower2.poppy'/54, l='MpServer', x=7,25, y=237,13, z=-8,28], EntityItem['item.item.seeds'/53, l='MpServer', x=14,06, y=237,13, z=-4,59], EntityItem['item.item.seeds'/52, l='MpServer', x=7,00, y=237,13, z=-3,41], EntityItem['item.tile.flower2.poppy'/59, l='MpServer', x=2,91, y=237,13, z=-13,38], EntityItem['item.tile.flower2.poppy'/58, l='MpServer', x=4,25, y=237,13, z=-11,50], EntityItem['item.tile.flower2.poppy'/57, l='MpServer', x=0,16, y=237,13, z=-10,34], EntityItem['item.item.seeds'/56, l='MpServer', x=11,69, y=237,13, z=-0,88], EntityItem['item.item.seeds'/63, l='MpServer', x=10,78, y=237,13, z=42,03], EntityItem['item.item.seeds'/62, l='MpServer', x=0,09, y=237,13, z=30,13], EntityItem['item.item.seeds'/61, l='MpServer', x=5,47, y=237,13, z=22,41], EntityItem['item.tile.flower2.poppy'/60, l='MpServer', x=1,72, y=237,13, z=-15,72], EntityItem['item.item.seeds'/68, l='MpServer', x=20,84, y=237,13, z=-34,88], EntityItem['item.tile.flower2.poppy'/69, l='MpServer', x=20,69, y=237,13, z=-37,28], EntityItem['item.tile.flower2.poppy'/70, l='MpServer', x=16,63, y=237,13, z=-39,03], EntityItem['item.item.seeds'/64, l='MpServer', x=13,88, y=237,13, z=43,50], EntityItem['item.item.seeds'/65, l='MpServer', x=15,13, y=237,13, z=46,34], EntityItem['item.item.seeds'/67, l='MpServer', x=18,41, y=237,13, z=-33,53], EntityItem['item.item.seeds'/76, l='MpServer', x=24,28, y=237,13, z=18,38], EntityItem['item.item.seeds'/77, l='MpServer', x=27,50, y=237,13, z=16,50], EntityItem['item.item.seeds'/78, l='MpServer', x=17,09, y=237,13, z=40,41], EntityItem['item.item.seeds'/79, l='MpServer', x=16,84, y=237,13, z=43,44], EntityItem['item.item.seeds'/72, l='MpServer', x=31,41, y=237,13, z=-38,63], EntityItem['item.item.seeds'/73, l='MpServer', x=26,53, y=237,13, z=-31,38], EntityItem['item.item.seeds'/74, l='MpServer', x=30,47, y=237,13, z=-30,72], EntityItem['item.item.seeds'/75, l='MpServer', x=31,56, y=237,13, z=-25,28], EntityItem['item.item.seeds'/84, l='MpServer', x=35,47, y=237,13, z=44,09], EntityItem['item.item.seeds'/81, l='MpServer', x=32,34, y=237,13, z=-38,03], EntityItem['item.item.seeds'/80, l='MpServer', x=19,91, y=237,13, z=43,63], EntityItem['item.item.seeds'/83, l='MpServer', x=38,44, y=237,13, z=-28,59], EntityItem['item.item.seeds'/82, l='MpServer', x=37,03, y=237,13, z=-28,16], EntityClientPlayerMP['Player480'/91, l='MpServer', x=25,43, y=272,64, z=21,35], EntityItem['item.item.seeds'/354, l='MpServer', x=20,69, y=237,13, z=46,16]]
+	Retry entities: 0 total; []
+	Server brand: fml,forge
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:412)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2524)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:941)
+	at net.minecraft.client.main.Main.main(Main.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.2
+	Operating System: Mac OS X (x86_64) version 10.9.2
+	Java Version: 1.6.0_65, Apple Inc.
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Apple Inc.
+	Memory: 813949096 bytes (776 MB) / 1065025536 bytes (1015 MB) up to 1065025536 bytes (1015 MB)
+	JVM Flags: 3 total; -Xincgc -Xmx1024M -Xms1024M
+	AABB Pool Size: 22819 (1277864 bytes; 1 MB) allocated, 2 (112 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.03 FML v7.2.211.1121 Minecraft Forge 10.12.2.1121 4 mods loaded, 4 mods active
+	mcp{9.03} [Minecraft Coder Pack] (minecraft.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	FML{7.2.211.1121} [Forge Mod Loader] (forgeSrc-1.7.2-10.12.2.1121.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Forge{10.12.2.1121} [Minecraft Forge] (forgeSrc-1.7.2-10.12.2.1121.jar) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	bloovtech{Pre-alpha 0.001} [bloovtech] (bin) Unloaded->Constructed->Pre-initialized->Initialized->Post-initialized->Available->Available->Available->Available
+	Launched Version: 1.6
+	LWJGL: 2.9.1
+	OpenGL: Intel HD Graphics 5000 OpenGL Engine GL version 2.1 INTEL-8.24.11, Intel Inc.
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: ~~ERROR~~ NullPointerException: null
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 324 (18144 bytes; 0 MB) allocated, 20 (1120 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

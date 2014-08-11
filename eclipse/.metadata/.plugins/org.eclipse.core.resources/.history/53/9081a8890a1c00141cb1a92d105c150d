@@ -1,0 +1,29 @@
+package com.loovjo.bloovtech.event;
+
+import com.loovjo.bloovtech.BloovMain;
+import com.loovjo.bloovtech.item.ItemOverPower;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
+import net.minecraftforge.event.entity.living.LivingEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+
+public class BloovEventHandler {
+	
+	@SubscribeEvent
+	public void entityUpdate(LivingEvent e) {
+		if (e.entity instanceof EntityPlayer) {
+			EntityPlayer en = (EntityPlayer) e.entity;
+			for (ItemOverPower i : BloovMain.iOp) {
+				if (en.inventory.hasItem(i)) {
+					en.addPotionEffect(new PotionEffect(Potion.poison.id, i.pp * 50, i.pp * 50));
+					if (en.isPotionActive(Potion.poison.id) && en.getHealth() <= 1) {
+						en.setHealth(0);
+					}
+				}
+			}
+		}
+	}
+
+}

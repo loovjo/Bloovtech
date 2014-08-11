@@ -1,0 +1,47 @@
+package com.loovjo.bloovtech.tileentity;
+
+import java.util.ArrayList;
+
+import com.loovjo.bloovtech.BloovMain;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.common.util.ForgeDirection;
+
+public class TileEntityFastGrass extends TileEntity {
+
+	@Override
+	public void updateEntity() {
+		if (!worldObj.isRemote) {
+			int i = 0, j = 0;
+			ArrayList<ForgeDirection> d = new ArrayList<ForgeDirection>();
+			d.add(ForgeDirection.EAST);
+			d.add(ForgeDirection.WEST);
+			d.add(ForgeDirection.SOUTH);
+			d.add(ForgeDirection.NORTH);
+			for (int k = 0; k < 3; k++) {
+				ForgeDirection dir = d.get(worldObj.rand.nextInt(d.size()));
+
+				if (worldObj.getBlock(xCoord + dir.offsetX, yCoord
+						+ dir.offsetY, zCoord + dir.offsetZ) == Blocks.dirt) {
+					worldObj.setBlock(xCoord + dir.offsetX, yCoord
+							+ dir.offsetY, zCoord + dir.offsetZ,
+							BloovMain.blockFastGrass);
+				}
+			}
+
+			boolean anySideIsDirt = false;
+			for (ForgeDirection dir2 : d) {
+				if (worldObj.getBlock(xCoord + dir2.offsetX, yCoord
+						+ dir2.offsetY, zCoord + dir2.offsetZ) == Blocks.dirt) {
+					anySideIsDirt = true;
+				}
+			}
+			if (!anySideIsDirt) {
+				worldObj.setBlock(xCoord, yCoord, zCoord, Blocks.grass);
+			}
+		}
+
+	}
+
+}

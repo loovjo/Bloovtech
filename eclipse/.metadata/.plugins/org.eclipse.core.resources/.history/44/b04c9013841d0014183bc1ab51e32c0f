@@ -1,0 +1,30 @@
+package com.loovjo.bloovtech.tileentity;
+
+import java.util.ArrayList;
+
+import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.common.util.ForgeDirection;
+
+public class TileEntityFastGrass extends TileEntity {
+
+	@Override
+	public void updateEntity() {
+		if (worldObj.rand.nextInt(20) == 0) {
+
+			int i = 0, j = 0;
+			ArrayList<ForgeDirection> d = new ArrayList<ForgeDirection>();
+			d.add(ForgeDirection.EAST);
+			d.add(ForgeDirection.WEST);
+			d.add(ForgeDirection.SOUTH);
+			d.add(ForgeDirection.NORTH);
+			d.add(ForgeDirection.DOWN);
+			d.add(ForgeDirection.UP);
+			for (int i2 = 0; i2 < d.size(); i2++) {
+				int index = worldObj.rand.nextInt(d.size());
+				
+			}
+		}
+		super.updateEntity();
+	}
+
+}

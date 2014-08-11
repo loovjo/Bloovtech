@@ -1,0 +1,7 @@
+package com.loovjo.bloovtech.item;
+
+import net.minecraft.item.Item;
+
+public class ItemLawnMover extends Item {
+
+}

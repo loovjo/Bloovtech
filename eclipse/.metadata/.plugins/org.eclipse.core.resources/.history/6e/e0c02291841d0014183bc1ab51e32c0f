@@ -1,0 +1,39 @@
+package com.loovjo.bloovtech.tileentity;
+
+import java.util.ArrayList;
+
+import com.loovjo.bloovtech.BloovMain;
+
+import net.minecraft.init.Blocks;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.common.util.ForgeDirection;
+
+public class TileEntityFastGrass extends TileEntity {
+
+	@Override
+	public void updateEntity() {
+		if (!worldObj.isRemote) {
+			if (worldObj.rand.nextInt(5) == 0) {
+
+				int i = 0, j = 0;
+				ArrayList<ForgeDirection> d = new ArrayList<ForgeDirection>();
+				d.add(ForgeDirection.EAST);
+				d.add(ForgeDirection.WEST);
+				d.add(ForgeDirection.SOUTH);
+				d.add(ForgeDirection.NORTH);
+				d.add(ForgeDirection.DOWN);
+				d.add(ForgeDirection.UP);
+				ForgeDirection dir = d.get(worldObj.rand.nextInt(d.size()));
+				if (worldObj.getBlock(xCoord + dir.offsetX, yCoord
+						+ dir.offsetY, zCoord + dir.offsetZ) == Blocks.dirt) {
+					worldObj.setBlock(xCoord + dir.offsetX, yCoord
+							+ dir.offsetY, zCoord + dir.offsetZ,
+							BloovMain.blockFastGrass);
+					worldObj.setBlock(xCoord, yCoord, zCoord, Blocks.grass);
+				}
+			}
+		}
+
+	}
+
+}
