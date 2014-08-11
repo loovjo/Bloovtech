@@ -1,0 +1,16 @@
+[
+{
+  "modid": â"Bloovtechâ",
+  "name": â"BloovTechâ",
+  "description": â"Adds stuff to Minecraft.â",
+  "version": â"Pre-alpha 0.001â",
+  "mcversion": â"1.7.10,
+  "url": "",
+  "updateUrl": "",
+  "authorList": [â"loovjoâ", â"blooudfjulâ"],
+  "credits": â"Loovjo â"for programing pretty much everything and blooudfjul for texturing and modeling,
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

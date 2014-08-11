@@ -1,0 +1,36 @@
+package com.loovjo.bloovtech.item;
+
+import net.minecraft.block.Block;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemAxe;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+
+import com.loovjo.bloovtech.BloovMain;
+import com.loovjo.bloovtech.tileentity.TileEntityCutWood;
+
+public class ItemSaw extends ItemAxe {
+
+	public ItemSaw(ToolMaterial p_i45327_1_) {
+		super(p_i45327_1_);
+	}
+
+	@Override
+	public boolean onBlockDestroyed(ItemStack p_150894_1_, World world,
+			Block p_150894_3_, int x, int y, int z, EntityLivingBase player) {
+		if (!world.isRemote) {
+			if (world.getBlock(x, y, z) == Blocks.log
+					|| world.getBlock(x, y, z) == Blocks.log2) {
+				world.setTileEntity(x, y, z, new TileEntityCutWood(
+						(EntityPlayer) player));
+
+			}
+		}
+		return true;
+	}
+
+}

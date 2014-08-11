@@ -1,0 +1,50 @@
+package com.loovjo.bloovtech.item;
+
+import net.minecraft.block.Block;
+import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
+
+import com.loovjo.bloovtech.BloovMain;
+import com.loovjo.bloovtech.tileentity.TileEntityCutWood;
+
+public class ItemSaw extends Item {
+
+	public void mineBlock(World world, int x, int y, int z, int meta,
+			EntityPlayer player, Block block) {
+		if (!world.isRemote) {
+			// Workaround for dropping experience
+			boolean silktouch = EnchantmentHelper.getSilkTouchModifier(player);
+			int fortune = EnchantmentHelper.getFortuneModifier(player);
+			int exp = block.getExpDrop(world, meta, fortune);
+
+			block.onBlockHarvested(world, x, y, z, meta, player);
+			if (block.removedByPlayer(world, player, x, y, z)) {
+				block.onBlockDestroyedByPlayer(world, x, y, z, meta);
+				block.harvestBlock(world, player, x, y, z, meta);
+				// Workaround for dropping experience
+				if (!silktouch)
+					block.dropXpOnBlockBreak(world, x, y, z, exp);
+			}
+		} else {
+			block.onBlockDestroyedByPlayer(world, x, y, z, meta);
+		}
+	}
+
+	@Override
+	public boolean onItemUse(ItemStack is, EntityPlayer player, World world,
+			int x, int y, int z, int par7, float par8, float par9, float par10) {
+		if (!world.isRemote) {
+			if (world.getBlock(x, y, z) == Blocks.log
+					|| world.getBlock(x, y, z) == Blocks.log2) {
+				world.setTileEntity(x, y, z, new TileEntityCutWood());
+				return true;
+			}
+		}
+		return false;
+
+	}
+}

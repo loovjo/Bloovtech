@@ -11,6 +11,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.oredict.OreDictionary;
@@ -42,6 +43,7 @@ import com.loovjo.bloovtech.item.ItemPowerStone;
 import com.loovjo.bloovtech.item.ItemSaw;
 import com.loovjo.bloovtech.proxy.CommonProxy;
 import com.loovjo.bloovtech.tileentity.TileEntityCustomCraftingTable;
+import com.loovjo.bloovtech.tileentity.TileEntityCutWood;
 import com.loovjo.bloovtech.tileentity.TileEntityEnergyBarrel;
 import com.loovjo.bloovtech.tileentity.TileEntityEnergyTransferer;
 import com.loovjo.bloovtech.tileentity.TileEntityFastGrass;
@@ -62,7 +64,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = BloovMain.MODID, version = BloovMain.VERSION)
+@Mod(modid = BloovMain.MODID, version = BloovMain.VERSION, name="Bloovtech")
 public class BloovMain {
 	public static final String MODID = "bloovtech";
 	public static final String VERSION = "Pre-alpha 0.001";
@@ -133,7 +135,7 @@ public class BloovMain {
 			.setCreativeTab(bloovtab).setMaxStackSize(1)
 			.setUnlocalizedName("electricBag")
 			.setTextureName(MODID + ":electricbag");
-	public static Item itemIronSaw = new ItemSaw()
+	public static Item itemIronSaw = new ItemSaw(ToolMaterial.IRON)
 			.setUnlocalizedName("ironSaw").setTextureName(MODID + ":ironSaw")
 			.setMaxStackSize(1).setCreativeTab(bloovtab);
 	public static Item itemSawBlade = new Item()
@@ -273,9 +275,10 @@ public class BloovMain {
 			GameRegistry.registerTileEntity(
 					TileEntityCustomCraftingTable.class,
 					MODID + ":cct" + type.getUnlocalizedName());
-			GameRegistry.registerItem(i, "craftingTable"
-					+ type.getUnlocalizedName().substring(5));
-
+			/*
+			 * GameRegistry.registerItem(i, "craftingTable" +
+			 * type.getUnlocalizedName().substring(5));
+			 */
 			GameRegistry.addRecipe(new ItemStack(i), " a ", "ibi", " a ", 'a',
 					Items.iron_axe, 'b', type, 'i', itemIronSaw);
 
@@ -322,6 +325,8 @@ public class BloovMain {
 				+ ":fastGrass");
 		GameRegistry.registerTileEntity(TileEntityGrassEater.class, MODID
 				+ ":grassEater");
+		GameRegistry.registerTileEntity(TileEntityCutWood.class, MODID
+				+ ":cutWood");
 	}
 
 	private void registerBlocks() {

@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.regex.Pattern"/>
-<fullyQualifiedTypeName name="net.minecraft.entity.player.InventoryPlayer"/>
-<fullyQualifiedTypeName name="java.awt.Container"/>
-<fullyQualifiedTypeName name="com.loovjo.bloovtech.container.ContainerSteamGenerator"/>
-<fullyQualifiedTypeName name="com.loovjo.bloovtech.container.ContainerTurbine"/>
 <fullyQualifiedTypeName name="com.loovjo.bloovtech.tileentity.TileEntitySteamToPower"/>
 <fullyQualifiedTypeName name="net.minecraft.dispenser.IPosition"/>
 <fullyQualifiedTypeName name="net.minecraftforge.fluids.IFluidHandler"/>
@@ -15,7 +10,6 @@
 <fullyQualifiedTypeName name="com.loovjo.bloovtech.tileentity.TileEntityEnergyBarrel"/>
 <fullyQualifiedTypeName name="com.loovjo.bloovtech.tileentity.TileEntityEnergyTransferer"/>
 <fullyQualifiedTypeName name="com.loovjo.bloovtech.interfaces.IEnergyConnectable"/>
-<fullyQualifiedTypeName name="net.minecraft.item.Item.ToolMaterial"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="com.loovjo.bloovtech.item.ItemPowerStone"/>
 <fullyQualifiedTypeName name="com.loovjo.bloovtech.tileentity.TileEntityInfuser"/>
@@ -50,14 +44,20 @@
 <fullyQualifiedTypeName name="net.minecraft.block.BlockSapling"/>
 <fullyQualifiedTypeName name="net.minecraft.block.BlockContainer"/>
 <fullyQualifiedTypeName name="com.loovjo.bloovtech.tileentity.TileEntityFastGrass"/>
-<fullyQualifiedTypeName name="net.minecraftforge.common.util.ForgeDirection"/>
 <fullyQualifiedTypeName name="com.loovjo.bloovtech.tileentity.TileEntityGrassEater"/>
-<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
 <fullyQualifiedTypeName name="net.minecraft.block.BlockOre"/>
 <fullyQualifiedTypeName name="net.minecraft.block.material.Material"/>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="com.loovjo.bloovtech.BloovMain"/>
 <fullyQualifiedTypeName name="com.loovjo.bloovtech.block.BlockCustomCraftingTable"/>
-<fullyQualifiedTypeName name="cpw.mods.fml.common.registry.GameRegistry"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.registry.GameRegistry"/>
+<fullyQualifiedTypeName name="net.minecraftforge.common.util.ForgeDirection"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
+<fullyQualifiedTypeName name="net.minecraft.tileentity.TileEntityPiston"/>
+<fullyQualifiedTypeName name="com.loovjo.bloovtech.tileentity.TileEntityCutWood"/>
+<fullyQualifiedTypeName name="net.minecraft.command.server.CommandSetBlock"/>
+<fullyQualifiedTypeName name="net.minecraft.item.ItemAxe"/>
+<fullyQualifiedTypeName name="net.minecraft.item.Item.ToolMaterial"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.Mod"/>
 </qualifiedTypeNameHistroy>

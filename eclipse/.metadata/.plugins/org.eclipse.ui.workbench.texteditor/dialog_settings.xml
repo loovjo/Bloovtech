@@ -13,18 +13,20 @@
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="cake" key="selection"/>
+		<item value="&quot;" key="selection"/>
 		<list key="findhistory">
+			<item value="‚Äù"/>
+			<item value=",Äù"/>
+			<item value="Äù"/>
+			<item value="fd."/>
+			<item value="clea"/>
 			<item value="cake"/>
 			<item value="Item"/>
 			<item value="ore"/>
-			<item value="grass"/>
-			<item value="skull"/>
-			<item value="en"/>
-			<item value="wither"/>
-			<item value="Items"/>
 		</list>
 		<list key="replacehistory">
+			<item value="&quot;"/>
+			<item value=""/>
 			<item value="e.entity"/>
 			<item value="b"/>
 			<item value="waterStored"/>

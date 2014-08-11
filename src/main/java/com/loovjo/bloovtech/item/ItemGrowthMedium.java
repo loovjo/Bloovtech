@@ -12,12 +12,13 @@ public class ItemGrowthMedium extends Item {
 	@Override
 	public boolean onItemUse(ItemStack is, EntityPlayer player, World world,
 			int x, int y, int z, int a, float par8, float par9, float par10) {
-		for (int i = 0; i < 20; i++) {
-			if (world.getBlock(x, y, z) == Blocks.sapling) {
-				BlockSapling s = ((BlockSapling) world.getBlock(x, y, z));
-				s.func_149879_c(world, x, y, z, world.rand);
+		if (!world.isRemote)
+			for (int i = 0; i < 20; i++) {
+				if (world.getBlock(x, y, z) == Blocks.sapling) {
+					BlockSapling s = ((BlockSapling) world.getBlock(x, y, z));
+					s.func_149879_c(world, x, y, z, world.rand);
+				}
 			}
-		}
 		return false;
 	}
 

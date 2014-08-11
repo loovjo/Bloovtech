@@ -1,0 +1,56 @@
+package com.loovjo.bloovtech.tileentity;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraftforge.common.util.ForgeDirection;
+
+public class TileEntityCutWood extends TileEntity {
+
+	private int tick, tickMax = 2;
+	private EntityPlayer player;
+	private ItemStack is;
+
+	public TileEntityCutWood(EntityPlayer p, ItemStack is) {
+		player = p;
+		this.is = is;
+	}
+
+	@Override
+	public void updateEntity() {
+		if (!worldObj.isRemote) {
+			//System.out.println(tick);
+			if (tick >= tickMax && is.getItemDamage() >= 0) {
+				tick = -1;
+				this.worldObj.removeTileEntity(this.xCoord, this.yCoord,
+						this.zCoord);
+				this.invalidate();
+				if (worldObj.getBlock(xCoord, yCoord, zCoord) == Blocks.log
+						|| worldObj.getBlock(xCoord, yCoord, zCoord) == Blocks.log2
+						|| worldObj.getBlock(xCoord, yCoord, zCoord) == Blocks.leaves
+						|| worldObj.getBlock(xCoord, yCoord, zCoord) == Blocks.leaves2) {
+					worldObj.func_147480_a(xCoord, yCoord, zCoord, true);
+					is.damageItem(1, player);
+				}
+				for (ForgeDirection fd : ForgeDirection.values()) {
+					int x = xCoord + fd.offsetX, y = yCoord + fd.offsetY, z = zCoord
+							+ fd.offsetZ;
+					if (worldObj.getBlock(x, y, z) == Blocks.log
+							|| worldObj.getBlock(x, y, z) == Blocks.log2 || 
+							worldObj.getBlock(x, y, z) == Blocks.leaves
+							|| worldObj.getBlock(x, y, z) == Blocks.leaves2) {
+						//System.out.println(worldObj.getBlock(x, y, z));
+						worldObj.setTileEntity(x, y, z, new TileEntityCutWood(
+								player, is));
+						//System.out.println("lal");
+
+					}
+				}
+			}
+			if (tick >= 0)
+				tick++;
+
+		}
+	}
+}

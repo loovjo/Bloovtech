@@ -2,67 +2,35 @@ package com.loovjo.bloovtech.item;
 
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemAxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ItemSaw extends Item {
-	public int blocksLalled, maxLalled = 2000;
+import com.loovjo.bloovtech.BloovMain;
+import com.loovjo.bloovtech.tileentity.TileEntityCutWood;
 
-	public void mineBlock(World world, int x, int y, int z, int meta,
-			EntityPlayer player, Block block) {
-		if (!world.isRemote) {
-			// Workaround for dropping experience
-			boolean silktouch = EnchantmentHelper.getSilkTouchModifier(player);
-			int fortune = EnchantmentHelper.getFortuneModifier(player);
-			int exp = block.getExpDrop(world, meta, fortune);
+public class ItemSaw extends ItemAxe {
 
-			block.onBlockHarvested(world, x, y, z, meta, player);
-			if (block.removedByPlayer(world, player, x, y, z)) {
-				block.onBlockDestroyedByPlayer(world, x, y, z, meta);
-				block.harvestBlock(world, player, x, y, z, meta);
-				// Workaround for dropping experience
-				if (!silktouch)
-					block.dropXpOnBlockBreak(world, x, y, z, exp);
-			}
-		} else {
-			block.onBlockDestroyedByPlayer(world, x, y, z, meta);
-		}
-	}
-
-	public boolean onSecondUse(ItemStack is, EntityPlayer player, World world,
-			int x, int y, int z) {
-		// System.out.println(x + " " + y + " " + z);
-		if (world.getBlock(x, y, z) == Blocks.log
-				|| world.getBlock(x, y, z) == Blocks.leaves) {
-			if (world.getBlock(x, y, z) == Blocks.log) {
-				mineBlock(world, x, y, z, world.getBlockMetadata(x, y, z),
-						player, world.getBlock(x, y, z));
-			}
-			world.setBlock(x, y, z, Blocks.air);
-			for (int i = -1; i < 2; i++) {
-				for (int j = -1; j < 2; j++) {
-					if (blocksLalled < maxLalled) {
-						if (onSecondUse(is, player, world, x + i, y, z + j))
-							blocksLalled++;
-						if (onSecondUse(is, player, world, x + i, y + 1, z + j))
-							blocksLalled++;
-					}
-				}
-			}
-
-			return true;
-		}
-		return false;
+	public ItemSaw(ToolMaterial p_i45327_1_) {
+		super(p_i45327_1_);
 	}
 
 	@Override
-	public boolean onItemUse(ItemStack is, EntityPlayer player, World world,
-			int x, int y, int z, int par7, float par8, float par9, float par10) {
-		blocksLalled = 0;
-		maxLalled = 2000;
-		return onSecondUse(is, player, world, x, y, z);
+	public boolean onBlockDestroyed(ItemStack is, World world,
+			Block p_150894_3_, int x, int y, int z, EntityLivingBase player) {
+		if (!world.isRemote) {
+			if (world.getBlock(x, y, z) == Blocks.log
+					|| world.getBlock(x, y, z) == Blocks.log2) {
+				world.setTileEntity(x, y, z, new TileEntityCutWood(
+						(EntityPlayer) player, is));
+
+			}
+		}
+		return super.onBlockDestroyed(is, world, p_150894_3_, x, y, z, player);
 	}
+
 }
