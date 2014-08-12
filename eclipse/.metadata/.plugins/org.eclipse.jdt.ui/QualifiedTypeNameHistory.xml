@@ -51,7 +51,6 @@
 <fullyQualifiedTypeName name="com.loovjo.bloovtech.BloovMain"/>
 <fullyQualifiedTypeName name="com.loovjo.bloovtech.block.BlockCustomCraftingTable"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="cpw.mods.fml.common.registry.GameRegistry"/>
 <fullyQualifiedTypeName name="net.minecraftforge.common.util.ForgeDirection"/>
 <fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
 <fullyQualifiedTypeName name="net.minecraft.tileentity.TileEntityPiston"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="net.minecraft.item.ItemAxe"/>
 <fullyQualifiedTypeName name="net.minecraft.item.Item.ToolMaterial"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.Mod"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.common.registry.GameRegistry"/>
 </qualifiedTypeNameHistroy>

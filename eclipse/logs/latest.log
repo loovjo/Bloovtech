@@ -1,11 +1,11 @@
-[11:34:23] [main/INFO]: Setting user: Player686
-[11:34:26] [Client thread/INFO]: LWJGL Version: 2.9.1
-[11:34:31] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:bloovtech
-[11:34:32] [Sound Library Loader/INFO]: Sound engine started
-[11:34:33] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[11:34:33] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[11:34:33] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:bloovtech
-[11:34:34] [Client thread/ERROR]: Using missing texture, unable to load bloovtech:textures/items/lawnMover.png
+[11:23:37] [main/INFO]: Setting user: Player898
+[11:23:40] [Client thread/INFO]: LWJGL Version: 2.9.1
+[11:23:49] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Bloovtech
+[11:23:50] [Sound Library Loader/INFO]: Sound engine started
+[11:23:51] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[11:23:51] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[11:23:52] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Bloovtech
+[11:23:52] [Client thread/ERROR]: Using missing texture, unable to load bloovtech:textures/items/lawnMover.png
 java.io.FileNotFoundException: bloovtech:textures/items/lawnMover.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -26,7 +26,7 @@ java.io.FileNotFoundException: bloovtech:textures/items/lawnMover.png
 	at java.lang.reflect.Method.invoke(Method.java:597) ~[?:1.6.0_65]
 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134) [launchwrapper-1.9.jar:?]
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.9.jar:?]
-[11:34:34] [Client thread/ERROR]: Using missing texture, unable to load bloovtech:textures/items/electricbag.png
+[11:23:52] [Client thread/ERROR]: Using missing texture, unable to load bloovtech:textures/items/electricbag.png
 java.io.FileNotFoundException: bloovtech:textures/items/electricbag.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -47,8 +47,8 @@ java.io.FileNotFoundException: bloovtech:textures/items/electricbag.png
 	at java.lang.reflect.Method.invoke(Method.java:597) ~[?:1.6.0_65]
 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134) [launchwrapper-1.9.jar:?]
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.9.jar:?]
-[11:34:34] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[11:34:34] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_167_waterPump.png
+[11:23:52] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[11:23:52] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_167_waterPump.png
 java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_167_waterPump.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -69,7 +69,7 @@ java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_167_
 	at java.lang.reflect.Method.invoke(Method.java:597) ~[?:1.6.0_65]
 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134) [launchwrapper-1.9.jar:?]
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.9.jar:?]
-[11:34:34] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_187_tile.sandct.png
+[11:23:52] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_187_tile.sandct.png
 java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_187_tile.sandct.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -90,7 +90,7 @@ java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_187_
 	at java.lang.reflect.Method.invoke(Method.java:597) ~[?:1.6.0_65]
 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134) [launchwrapper-1.9.jar:?]
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.9.jar:?]
-[11:34:34] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_168_magnetQuarry.png
+[11:23:52] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_168_magnetQuarry.png
 java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_168_magnetQuarry.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -111,7 +111,7 @@ java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_168_
 	at java.lang.reflect.Method.invoke(Method.java:597) ~[?:1.6.0_65]
 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134) [launchwrapper-1.9.jar:?]
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.9.jar:?]
-[11:34:34] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_183_tile.stonect.png
+[11:23:52] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_183_tile.stonect.png
 java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_183_tile.stonect.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -132,7 +132,7 @@ java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_183_
 	at java.lang.reflect.Method.invoke(Method.java:597) ~[?:1.6.0_65]
 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134) [launchwrapper-1.9.jar:?]
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.9.jar:?]
-[11:34:34] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_165_powerPipe.png
+[11:23:52] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_165_powerPipe.png
 java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_165_powerPipe.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -153,7 +153,7 @@ java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_165_
 	at java.lang.reflect.Method.invoke(Method.java:597) ~[?:1.6.0_65]
 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134) [launchwrapper-1.9.jar:?]
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.9.jar:?]
-[11:34:34] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_184_tile.woodct.png
+[11:23:52] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_184_tile.woodct.png
 java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_184_tile.woodct.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -174,7 +174,7 @@ java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_184_
 	at java.lang.reflect.Method.invoke(Method.java:597) ~[?:1.6.0_65]
 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134) [launchwrapper-1.9.jar:?]
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.9.jar:?]
-[11:34:34] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_179_infuser.png
+[11:23:52] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_179_infuser.png
 java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_179_infuser.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -195,7 +195,7 @@ java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_179_
 	at java.lang.reflect.Method.invoke(Method.java:597) ~[?:1.6.0_65]
 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134) [launchwrapper-1.9.jar:?]
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.9.jar:?]
-[11:34:34] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_176_turbine.png
+[11:23:52] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_176_turbine.png
 java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_176_turbine.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -216,7 +216,7 @@ java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_176_
 	at java.lang.reflect.Method.invoke(Method.java:597) ~[?:1.6.0_65]
 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134) [launchwrapper-1.9.jar:?]
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.9.jar:?]
-[11:34:34] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_178_energyTransferer.png
+[11:23:52] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_178_energyTransferer.png
 java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_178_energyTransferer.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -237,7 +237,7 @@ java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_178_
 	at java.lang.reflect.Method.invoke(Method.java:597) ~[?:1.6.0_65]
 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134) [launchwrapper-1.9.jar:?]
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.9.jar:?]
-[11:34:34] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_185_tile.stonebricksmoothct.png
+[11:23:52] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_185_tile.stonebricksmoothct.png
 java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_185_tile.stonebricksmoothct.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -258,7 +258,7 @@ java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_185_
 	at java.lang.reflect.Method.invoke(Method.java:597) ~[?:1.6.0_65]
 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134) [launchwrapper-1.9.jar:?]
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.9.jar:?]
-[11:34:34] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_166_steamGenerator.png
+[11:23:52] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_166_steamGenerator.png
 java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_166_steamGenerator.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -279,7 +279,7 @@ java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_166_
 	at java.lang.reflect.Method.invoke(Method.java:597) ~[?:1.6.0_65]
 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134) [launchwrapper-1.9.jar:?]
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.9.jar:?]
-[11:34:34] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_186_tile.dirtct.png
+[11:23:52] [Client thread/ERROR]: Using missing texture, unable to load minecraft:textures/blocks/MISSING_ICON_BLOCK_186_tile.dirtct.png
 java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_186_tile.dirtct.png
 	at net.minecraft.client.resources.FallbackResourceManager.getResource(FallbackResourceManager.java:65) ~[FallbackResourceManager.class:?]
 	at net.minecraft.client.resources.SimpleReloadableResourceManager.getResource(SimpleReloadableResourceManager.java:67) ~[SimpleReloadableResourceManager.class:?]
@@ -300,42 +300,59 @@ java.io.FileNotFoundException: minecraft:textures/blocks/MISSING_ICON_BLOCK_186_
 	at java.lang.reflect.Method.invoke(Method.java:597) ~[?:1.6.0_65]
 	at net.minecraft.launchwrapper.Launch.launch(Launch.java:134) [launchwrapper-1.9.jar:?]
 	at net.minecraft.launchwrapper.Launch.main(Launch.java:28) [launchwrapper-1.9.jar:?]
-[11:34:34] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[11:34:35] [Sound Library Loader/INFO]: Sound engine started
-[11:34:38] [MCO Availability Checker #1/ERROR]: Couldn't connect to Realms
-[11:34:42] [Server thread/INFO]: Starting integrated minecraft server version 1.7.2
-[11:34:42] [Server thread/INFO]: Generating keypair
-[11:34:43] [Server thread/INFO]: Preparing start region for level 0
-[11:34:44] [Server thread/INFO]: Preparing spawn area: 32%
-[11:34:46] [Server thread/INFO]: Player686[local:E:6c1f3270] logged in with entity id 322 at (244.77415785187134, 89.0, 144.59243128349)
-[11:34:46] [Server thread/INFO]: Player686 joined the game
-[11:34:49] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2074ms behind, skipping 41 tick(s)
-[11:35:01] [Server thread/INFO]: Saving and pausing game...
-[11:35:01] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[11:35:01] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[11:35:01] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[12:34:39] [Server thread/WARN]: Time ran backwards! Did the system time change?
-[12:35:34] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 45524ms behind, skipping 910 tick(s)
-[12:35:56] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 15802ms behind, skipping 316 tick(s)
-[12:35:57] [Server thread/WARN]: Time ran backwards! Did the system time change?
-[16:09:17] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 12415396ms behind, skipping 248307 tick(s)
-[16:09:31] [Server thread/WARN]: Time ran backwards! Did the system time change?
-[16:39:24] [Server thread/WARN]: Time ran backwards! Did the system time change?
-[16:39:37] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4771ms behind, skipping 95 tick(s)
-[17:29:23] [Server thread/WARN]: Time ran backwards! Did the system time change?
-[17:30:22] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 50690ms behind, skipping 1013 tick(s)
-[17:41:40] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 280539ms behind, skipping 5610 tick(s)
-[19:36:42] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 5972385ms behind, skipping 119447 tick(s)
-[19:45:38] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 14147ms behind, skipping 282 tick(s)
-[19:46:45] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 25642ms behind, skipping 512 tick(s)
-[19:49:46] [Client thread/INFO]: Stopping!
-[19:49:46] [Server thread/INFO]: Stopping server
-[19:49:46] [Server thread/INFO]: Saving players
-[19:49:46] [Server thread/INFO]: Saving worlds
-[19:49:46] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[19:49:46] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[19:49:46] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[19:49:47] [Client Shutdown Thread/INFO]: Stopping server
-[19:49:47] [Client Shutdown Thread/INFO]: Saving players
-[19:49:47] [Client Shutdown Thread/INFO]: Saving worlds
-[19:49:47] [Client Shutdown Thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:23:53] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[11:23:53] [Sound Library Loader/INFO]: Sound engine started
+[11:23:55] [MCO Availability Checker #1/ERROR]: Couldn't connect to Realms
+[14:15:40] [Server thread/INFO]: Starting integrated minecraft server version 1.7.2
+[14:15:40] [Server thread/INFO]: Generating keypair
+[14:15:41] [Server thread/INFO]: Preparing start region for level 0
+[14:15:42] [Server thread/INFO]: Preparing spawn area: 2%
+[14:15:43] [Server thread/INFO]: Preparing spawn area: 34%
+[14:15:44] [Server thread/INFO]: Preparing spawn area: 89%
+[14:15:45] [Server thread/INFO]: Player898[local:E:d8e3bb61] logged in with entity id 939 at (242.4557543302373, 85.24727989251735, -156.31435572594972)
+[14:15:45] [Server thread/INFO]: Player898 joined the game
+[14:15:48] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2873ms behind, skipping 57 tick(s)
+[14:16:12] [Server thread/INFO]: Player898 has just earned the achievement [Taking Inventory]
+[14:16:12] [Client thread/INFO]: [CHAT] Player898 has just earned the achievement [Taking Inventory]
+[14:16:15] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4074ms behind, skipping 81 tick(s)
+[14:16:24] [Server thread/INFO]: <Player898> e
+[14:16:24] [Client thread/INFO]: [CHAT] <Player898> e
+[14:17:33] [Server thread/INFO]: <Player898> test
+[14:17:33] [Client thread/INFO]: [CHAT] <Player898> test
+[14:17:34] [Server thread/INFO]: Saving and pausing game...
+[14:17:34] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[14:17:34] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[14:17:34] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[14:17:34] [Server thread/INFO]: Stopping server
+[14:17:34] [Server thread/INFO]: Saving players
+[14:17:34] [Server thread/INFO]: Saving worlds
+[14:17:34] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[14:17:34] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[14:17:34] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[14:19:40] [Server thread/INFO]: Starting integrated minecraft server version 1.7.2
+[14:19:40] [Server thread/INFO]: Generating keypair
+[14:19:40] [Server thread/INFO]: Converting map!
+[14:19:40] [Server thread/INFO]: Scanning folders...
+[14:19:40] [Server thread/INFO]: Total conversion count is 0
+[14:19:41] [Server thread/INFO]: Preparing start region for level 0
+[14:19:42] [Server thread/INFO]: Preparing spawn area: 6%
+[14:19:43] [Server thread/INFO]: Preparing spawn area: 12%
+[14:19:44] [Server thread/INFO]: Preparing spawn area: 19%
+[14:19:45] [Server thread/INFO]: Preparing spawn area: 26%
+[14:19:46] [Server thread/INFO]: Preparing spawn area: 35%
+[14:19:47] [Server thread/INFO]: Preparing spawn area: 45%
+[14:19:48] [Server thread/INFO]: Preparing spawn area: 54%
+[14:19:49] [Server thread/INFO]: Preparing spawn area: 63%
+[14:19:50] [Server thread/INFO]: Preparing spawn area: 72%
+[14:19:51] [Server thread/INFO]: Preparing spawn area: 80%
+[14:19:52] [Server thread/INFO]: Preparing spawn area: 88%
+[14:19:53] [Server thread/INFO]: Preparing spawn area: 96%
+[14:19:54] [Server thread/INFO]: Player898[local:E:47242031] logged in with entity id 3250 at (80.5, 70.0, 257.5)
+[14:19:54] [Server thread/INFO]: Player898 joined the game
+[14:20:05] [Client thread/INFO]: Warning: Clientside chunk ticking took 213 ms
+[14:20:05] [Client thread/INFO]: Warning: Clientside chunk ticking took 206 ms
+[14:20:06] [Client thread/INFO]: Warning: Clientside chunk ticking took 184 ms
+[14:20:06] [Client thread/INFO]: Warning: Clientside chunk ticking took 132 ms
+[14:20:06] [Client thread/INFO]: Warning: Clientside chunk ticking took 130 ms
+[14:20:06] [Client thread/INFO]: Warning: Clientside chunk ticking took 157 ms
+[14:20:06] [Client thread/INFO]: Warning: Clientside chunk ticking took 113 ms

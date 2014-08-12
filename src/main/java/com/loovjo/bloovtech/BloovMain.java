@@ -64,7 +64,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = BloovMain.MODID, version = BloovMain.VERSION, name="Bloovtech")
+@Mod(modid = BloovMain.MODID, version = BloovMain.VERSION, name = "Bloovtech")
 public class BloovMain {
 	public static final String MODID = "bloovtech";
 	public static final String VERSION = "Pre-alpha 0.001";
@@ -246,6 +246,11 @@ public class BloovMain {
 				"drd", "ghg", "oso", 'd', Items.diamond, 'r',
 				Blocks.redstone_block, 'g', Items.golden_apple, 'h', "head",
 				'o', Blocks.obsidian, 's', Items.nether_star));
+
+		GameRegistry.addRecipe(new ShapedOreRecipe(
+				getHeadFromPlayer("ancalgost"), "fcf", "ghg", " b ", 'f',
+				Items.fish, 'c', blockCluster, 'g', Items.gold_ingot, 'h',
+				"head", 'b', Item.getItemById(30)));
 
 		GameRegistry.addRecipe(new ShapelessOreRecipe(
 				new ItemStack(Items.skull), "dyeWhite", "skull"));
